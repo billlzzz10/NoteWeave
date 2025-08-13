@@ -1,4 +1,4 @@
-# 🪶 Noteweave – AI สังเคราะห์ความรู้ส่วนตัวของคุณ ที่เชื่อมทุกเครื่องมือ
+# 🧵 Noteweave – AI สังเคราะห์ความรู้ส่วนตัวของคุณ ที่เชื่อมทุกเครื่องมือ
 
 [![Build Status](https://img.shields.io/github/actions/workflow/status/USERNAME/noteweave/ci.yml?branch=main&style=for-the-badge)](https://github.com/USERNAME/noteweave/actions)
 [![Latest Release](https://img.shields.io/github/v/release/USERNAME/noteweave?style=for-the-badge)](https://github.com/USERNAME/noteweave/releases)
@@ -72,3 +72,4 @@ Noteweave สามารถทำหน้าที่เป็น "ไคล�
 
 ### 10. สัญญาอนุญาต (License)
 โปรเจกต์นี้อยู่ภายใต้สัญญาอนุญาตแบบ **MIT License**
+
