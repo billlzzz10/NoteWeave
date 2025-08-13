@@ -1,9 +1,11 @@
 # 🪶 Noteweave – AI สังเคราะห์ความรู้ส่วนตัวของคุณ ที่เชื่อมทุกเครื่องมือ
 
-[![Build Status](https://img.shields.io/github/actions/workflow/status/USERNAME/noteweave/ci.yml?branch=main&style=for-the-badge)](https://github.com/USERNAME/noteweave/actions)
-[![Latest Release](https://img.shields.io/github/v/release/USERNAME/noteweave?style=for-the-badge)](https://github.com/USERNAME/noteweave/releases)
-[![MIT License](https://img.shields.io/github/license/USERNAME/noteweave?style=for-the-badge)](LICENSE)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/billlzzz10/NoteWeave/ci.yml?branch=main&style=for-the-badge)](https://github.com/billlzzz10/NoteWeave/actions)
+[![Latest Release](https://img.shields.io/github/v/release/billlzzz10/NoteWeave?style=for-the-badge)](https://github.com/billlzzz10/NoteWeave/releases)
+[![MIT License](https://img.shields.io/github/license/billlzzz10/NoteWeave?style=for-the-badge)](https://github.com/billlzzz10/NoteWeave/blob/main/LICENSE)
 [![Obsidian Downloads](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Fobsidianmd%2Fobsidian-releases%2Fmaster%2Fcommunity-plugin-stats.json&query=%24%5B'noteweave'%5D.downloads&label=downloads&style=for-the-badge&color=7B68EE)](https://obsidian.md/plugins)
+
+> **เชื่อมต่อและสังเคราะห์องค์ความรู้ของคุณจาก Obsidian, ClickUp, Notion, และ Airtable** เปลี่ยนข้อมูลที่กระจัดกระจายให้กลายเป็นฐานความรู้หนึ่งเดียวที่พูดคุยและโต้ตอบได้ ขับเคลื่อนด้วยเทคโนโลยี Retrieval-Augmented Generation (RAG)
 
 > **เชื่อมต่อและสังเคราะห์องค์ความรู้ของคุณจาก Obsidian, ClickUp, Notion, และ Airtable** เปลี่ยนข้อมูลที่กระจัดกระจายให้กลายเป็นฐานความรู้หนึ่งเดียวที่พูดคุยและโต้ตอบได้ ขับเคลื่อนด้วยเทคโนโลยี Retrieval-Augmented Generation (RAG)
 > 
