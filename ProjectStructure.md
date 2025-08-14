@@ -1,43 +1,39 @@
-NoteWeave-Engine/
-├── 📁 src/
-│   ├── 📁 core/                   # แกนหลักของ Business Logic
-│   │   └── 📄 rag.service.ts     # Logic การทำ RAG, Orchestrate service อื่นๆ
+NoteWeave is a monorepo designed to manage both backend and frontend plugins for collaborative note-taking and knowledge management.
+
+NoteWeave/  (The Single Repository)
+│   ├── 📁 NoteWeave-Engine/  (Plugin A: "Kitchen" - The Headless Backend)
+│   │   ├── 📁 src/
+│   │   │   ├── 📁 core/
+│   │   │   │   └── 📄 rag.service.ts
+│   │   │   ├── 📁 services/
+│   │   │   │   ├── 📄 notion.service.ts
+│   │   │   │   ├── 📄 clickup.service.ts
+│   │   │   │   └── 📄 embedding.service.ts
+│   │   │   ├── 📁 providers/
+│   │   │   │   ├── 📄 ollama.provider.ts
+│   │   │   │   └── 📄 openai.provider.ts
+│   │   │   ├── 📄 main.ts
+│   │   │   └── 📄 api.ts  (Public API สำหรับ UI Plugin / Public API for UI Plugin)
+│   │   ├── 📄 package.json
+│   │   └── 📄 tsconfig.json
 │   │
-│   ├── 📁 services/               # ✨ **หัวใจของการขยายระบบ**
-│   │   ├── 📄 notion.service.ts    # Logic ทั้งหมดที่เกี่ยวกับ Notion
-│   │   ├── 📄 clickup.service.ts   # Logic ทั้งหมดที่เกี่ยวกับ ClickUp
-│   │   ├── 📄 ollama.provider.ts   # Logic การคุยกับ Ollama
-│   │   ├── 📄 openai.provider.ts  # Logic การคุยกับ OpenAI
-│   │   └── 📄 embedding.service.ts # Logic การสร้าง Embedding
+│   ├── 📁NoteWeave-UI/      (Plugin B: "Frontend" - The Storefront)
+│   │   ├── 📁 src/
+│   │   │   ├── 📁 components/
+│   │   │   │   ├── 📁 views/
+│   │   │   │   └── 📄 ChatPanel.tsx
+│   │   │   ├── 📁 lib/
+│   │   │   │   └── 📄 useEngine.ts
+│   │   │   └── 📄 main.ts
+│   │   ├── 📄 package.json
+│   │   └── 📄 tsconfig.json
 │   │
-│   ├── 📁 types/                  # เก็บ Type Definitions และ Interfaces
-│   │   ├── 📄 data-views.types.ts
-│   │   └── 📄 external-apis.types.ts
-│   │
-│   ├── 📄 main.ts                 # Entry point ของ Engine Plugin
-│   └── 📄 api.ts                  # Public API ที่เปิดให้ UI Plugin เรียกใช้
+│   └── 📁 types/   (แพ็กเกจสำหรับแชร์ Type ข้อมูล / Package for sharing data types)
+│       ├── 📄 index.ts
+│       └── 📄 package.json
 │
-├── 📄 package.json
-├── 📄 tsconfig.json
-└── 📄 README.md
-
-
-
-NoteWeave-UI/
-├── 📁 src/
-│   ├── 📁 components/             # React Components สำหรับ UI
-│   │   ├── 📁 views/             # Components สำหรับ Data Views
-│   │   │   ├── 📄 TableView.tsx
-│   │   │   └── 📄 BoardView.tsx
-│   │   ├── 📄 ChatPanel.tsx
-│   │   └── 📄 SettingsTab.tsx
-│   │
-│   ├── 📁 lib/                    # (หรือ hooks/) สำหรับจัดการ State และการเรียก API
-│   │   └── 📄 useEngine.ts        # Custom Hook สำหรับเรียกใช้ Engine API
-│   │
-│   ├── 📄 main.ts                 # Entry point ของ UI Plugin
-│   └── 📄 styles.css
-│
-├── 📄 package.json
-├── 📄 tsconfig.json
-└── 📄 README.md
+├── 📄 .gitignore
+├── 📄 LICENSE
+├── 📄 package.json        (Main file for managing Monorepo Workspaces / ไฟล์หลักสำหรับจัดการ Monorepo Workspaces)
+├── 📄 README.md
+└── 📄 tsconfig.base.json  (Base TS config ที่แชร์กันใช้ / Base TS config shared by all)

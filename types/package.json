@@ -1,0 +1,6 @@
+{
+  "name": "noteweave-types",
+  "version": "0.1.0",
+  "types": "index.ts",
+  "license": "MIT"
+}

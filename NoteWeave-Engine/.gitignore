@@ -1,0 +1,27 @@
+# Dependencies
+/node_modules
+
+# Build artifacts
+/dist
+
+# Environment variables
+.env
+.env.local
+
+# Vector store data
+/.noteweave
+
+# Logs
+*.log
+npm-debug.log*
+
+# IDE
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+# System files
+.DS_Store
+Thumbs.db

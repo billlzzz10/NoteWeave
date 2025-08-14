@@ -1,0 +1,42 @@
+{
+    "azureFunctions.deploySubpath": ".",
+    "azureFunctions.postDeployTask": "npm install (functions)",
+    "azureFunctions.projectLanguage": "TypeScript",
+    "azureFunctions.projectRuntime": "~4",
+    "debug.internalConsoleOptions": "neverOpen",
+    "azureFunctions.projectLanguageModel": 4,
+    "azureFunctions.preDeployTask": "npm prune (functions)",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit"
+    },
+    "typescript.preferences.importModuleSpecifier": "relative",
+    "eslint.validate": [
+        "javascript",
+        "typescript",
+        "typescriptreact"
+    ],
+    "files.exclude": {
+        "**/.git": true,
+        "**/node_modules": true,
+        "**/dist": true,
+        "**/.cache": true
+    },
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/dist": true
+    },
+    "jupyter.notebookFileRoot": "${workspaceFolder}",
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}/python_analysis"
+    ],
+    "terminal.integrated.env.windows": {
+        "OLLAMA_HOST": "http://localhost:11434",
+        "OLLAMA_GPU_LAYERS": "0"
+    },
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#233348",
+        "titleBar.activeBackground": "#1F2C3A",
+        "titleBar.activeForeground": "#F8FAFD"
+    }
+}
