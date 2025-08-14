@@ -38,7 +38,6 @@
 - See `ProjectStructure.md` for up-to-date directory layout.
 
 ---
-
 # Codacy Rules
 Configuration for AI behavior when interacting with Codacy's MCP Server
 
@@ -98,14 +97,3 @@ Configuration for AI behavior when interacting with Codacy's MCP Server
 - If the user accepts, run the `codacy_setup_repository` tool
 - Do not ever try to run the `codacy_setup_repository` tool on your own
 - After setup, immediately retry the action that failed (only retry once)
-
-## กฎการใช้ภาษา
-- ตอบกลับในแชตและเขียนคำอธิบาย/คอมเมนต์ในโค้ดเป็นภาษาไทยเป็นหลัก
-- ชื่อไฟล์, โค้ด, API, และคำทับศัพท์ทางเทคนิค ให้ใช้ตามต้นฉบับหรือภาษาอังกฤษตามมาตรฐาน
-- เว้นแต่ผู้ใช้ระบุให้ใช้ภาษาอื่น หรือเนื้อหานั้นจำเป็นต้องใช้ภาษาอังกฤษ
-- หากมีข้อสงสัยเกี่ยวกับภาษา ให้ถามผู้ใช้ก่อนดำเนินการต่อ
-
-## กฎการทำงานตาม Checklist
-1. ทำงานตามรายการในไฟล์ Checklist (`Doc/Checklist.md`) เป็นหลัก
-2. เมื่อดำเนินงานใน Checklist สำเร็จ ให้เพิ่มเครื่องหมายถูก (✓) หรือแก้ไขสถานะใน Checklist ทันที
-3. หากพบงานหรือคำขอที่อยู่นอกเหนือจาก Checklist ให้สอบถามและขออนุมัติจากผู้ใช้ก่อนดำเนินการ
