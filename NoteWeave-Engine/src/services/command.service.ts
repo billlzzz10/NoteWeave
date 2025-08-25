@@ -7,12 +7,12 @@ import { ChatCommand, CommandHandler } from '../types';
  */
 export class CommandService {
   private commands: Map<string, ChatCommand>;
-  
+
   constructor() {
     this.commands = new Map();
     this.registerDefaultCommands();
   }
-  
+
   /**
    * Register a new command
    */
@@ -24,7 +24,7 @@ export class CommandService {
       handler
     });
   }
-  
+
   /**
    * Register default commands
    */
@@ -36,7 +36,7 @@ export class CommandService {
       'ค้นหาเอกสารที่เกี่ยวข้องโดยใช้ semantic search',
       ['/search ประวัติศาสตร์ไทยสมัยอยุธยา', '/search การเขียนโปรแกรม Python']
     );
-    
+
     // Ask command
     this.registerCommand(
       'ask',
@@ -44,7 +44,7 @@ export class CommandService {
       'ถามคำถามโดยใช้ RAG เพื่อหาคำตอบจากเอกสาร',
       ['/ask ประเทศไทยมีจังหวัดกี่จังหวัด', '/ask วิธีเขียนโปรแกรม Python']
     );
-    
+
     // Stats command
     this.registerCommand(
       'stats',
@@ -52,7 +52,7 @@ export class CommandService {
       'แสดงสถิติของ knowledge base',
       ['/stats']
     );
-    
+
     // Help command
     this.registerCommand(
       'help',
@@ -65,13 +65,13 @@ export class CommandService {
             examples: cmd.examples
           };
         }
-        
+
         return this.listCommands();
       },
       'แสดงคำสั่งที่สามารถใช้งานได้หรือรายละเอียดของคำสั่งที่ระบุ',
       ['/help', '/help search']
     );
-    
+
     // Providers command
     this.registerCommand(
       'providers',
@@ -80,7 +80,7 @@ export class CommandService {
       ['/providers']
     );
   }
-  
+
   /**
    * List all available commands
    */
@@ -89,10 +89,10 @@ export class CommandService {
       name: cmd.name,
       description: cmd.description
     }));
-    
+
     return { commands: commandList };
   }
-  
+
   /**
    * Process a command
    */
@@ -101,17 +101,17 @@ export class CommandService {
     if (!text.startsWith('/')) {
       throw new Error('ข้อความนี้ไม่ใช่คำสั่ง');
     }
-    
+
     // Extract command name and arguments
     const parts = text.substring(1).trim().split(' ');
     const commandName = parts[0].toLowerCase();
     const args = parts.slice(1).join(' ');
-    
+
     // Check if command exists
     if (!this.commands.has(commandName)) {
       throw new Error(`ไม่พบคำสั่ง "${commandName}" ลองใช้ /help เพื่อดูคำสั่งที่มี`);
     }
-    
+
     // Execute command
     const command = this.commands.get(commandName)!;
     try {
@@ -120,7 +120,7 @@ export class CommandService {
       throw new Error(`เกิดข้อผิดพลาดในการทำงานของคำสั่ง ${commandName}: ${error instanceof Error ? error.message : String(error)}`);
     }
   }
-  
+
   /**
    * Check if text is a command
    */
