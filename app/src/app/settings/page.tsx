@@ -7,11 +7,11 @@ export default function SettingsPage() {
   const [apiKey, setApiKey] = useState('');
   const [model, setModel] = useState('');
 
-  const handleProviderChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+  function handleProviderChange(e: React.ChangeEvent<HTMLSelectElement>) {
     setProvider(e.target.value);
     // In a real app, you would fetch models for the selected provider
     setModel('');
-  };
+  }
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
