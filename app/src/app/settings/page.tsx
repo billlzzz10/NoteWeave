@@ -49,9 +49,7 @@ export default function SettingsPage() {
               type="password"
               id="api-key"
               value={apiKey}
-              onChange={(e) => {
-                setApiKey(e.target.value);
-              }}
+              onChange={(e) => { setApiKey(e.target.value); }}
               className="mt-1 block w-full px-3 py-2 border border-gray-300 bg-gray-50 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
               placeholder="Enter your API key"
             />
@@ -64,9 +62,7 @@ export default function SettingsPage() {
             <select
               id="model"
               value={model}
-              onChange={(e) => {
-                setModel(e.target.value);
-              }}
+              onChange={(e) => { setModel(e.target.value); }}
               className="mt-1 block w-full px-3 py-2 border border-gray-300 bg-gray-50 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
               disabled={!provider} // Example: disable if no provider is selected
             >

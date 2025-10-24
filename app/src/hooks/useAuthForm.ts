@@ -35,8 +35,12 @@ export function useAuthForm(authType: AuthType) {
           const data = await res.json();
           setError(data.message || 'Registration failed.');
         }
-      } catch (err: any) {
-        setError(err.message || 'An unexpected error occurred.');
+      } catch (err) {
+        if (err instanceof Error) {
+          setError(err.message);
+        } else {
+          setError('An unexpected error occurred.');
+        }
       } finally {
         setIsLoading(false);
       }
@@ -53,8 +57,12 @@ export function useAuthForm(authType: AuthType) {
         } else if (result?.ok) {
           router.push('/workspace');
         }
-      } catch (err: any) {
-        setError(err.message || 'An unexpected error occurred during login.');
+      } catch (err) {
+         if (err instanceof Error) {
+          setError(err.message);
+        } else {
+          setError('An unexpected error occurred during login.');
+        }
       } finally {
         setIsLoading(false);
       }
