@@ -26,13 +26,13 @@ export default function LoginPage() {
 
         <div className="grid grid-cols-2 gap-3">
           <button
-            onClick={() => { signIn('github', { callbackUrl: '/workspace' }).catch(console.error); }}
+            onClick={() => { void signIn('github', { callbackUrl: '/workspace' }); }}
             className="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
           >
             GitHub
           </button>
           <button
-            onClick={() => { signIn('google', { callbackUrl: '/workspace' }).catch(console.error); }}
+            onClick={() => { void signIn('google', { callbackUrl: '/workspace' }); }}
             className="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50"
           >
             Google
