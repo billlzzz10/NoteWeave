@@ -16,7 +16,7 @@
     "dotenv": "^16.6.1",
     "express": "^4.22.1",
     "faiss-node": "^0.5.1",
-    "langchain": "^1.2.3",
+    "langchain": "^1.2.7",
     "marked": "^12.0.0",
     "node-fetch": "^3.3.2"
   },
